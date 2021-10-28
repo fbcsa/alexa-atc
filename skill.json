@@ -1,0 +1,94 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "es-ES": {
+          "summary": "Acciones para controlar los radiadores inteligentes de ATC",
+          "examplePhrases": [
+            "emisores electricos inteligentes para atece",
+            "Ayuda con las acciones"
+          ],
+          "keywords": [
+            "ATC",
+            "Heater",
+            "Smart",
+            "WiFi"
+          ],
+          "name": "ATC ELECTRICAL",
+          "description": "Con este skill se pueden controlar diversos aspectos de los radiadores inteligentes. Desde obtener la temperatura ambiente hasta cambiar los modos del mismo.",
+          "smallIconUri": "file://assets/images/es-ES_smallIconUri.png",
+          "largeIconUri": "file://assets/images/es-ES_largeIconUri.png"
+        },
+        "en-GB": {
+          "summary": "Actions for controlling ATC electrical smart heaters",
+          "examplePhrases": [
+            "open electrical smart heaters for atc",
+            "Help me with commands"
+          ],
+          "keywords": [
+            "ATC",
+            "Heater",
+            "Smart",
+            "WiFi"
+          ],
+          "name": "ATC ELECTRICAL",
+          "description": "With this skill you can control various aspects of smart radiators. From obtaining the room temperature to changing the modes of it.",
+          "smallIconUri": "file://assets/images/en-GB_smallIconUri.png",
+          "largeIconUri": "file://assets/images/en-GB_largeIconUri.png"
+        }
+      },
+      "automaticDistribution": {
+        "isActive": false
+      },
+      "isAvailableWorldwide": false,
+      "testingInstructions": "For account linking:\nUsername: firebasecsa@gmaill.com password: 12345678\nZone name for testing: test\nInstallation name for testing: casa\nEmitter names for testing: casa, oficina",
+      "category": "HOME_SERVICES",
+      "distributionMode": "PUBLIC",
+      "distributionCountries": [
+        "ES",
+        "IE"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "uri": "arn:aws:lambda:eu-west-1:609812512742:function:80a55286-2a07-4f3a-86f5-6f284305d4d6:Release_0"
+        },
+        "interfaces": [],
+        "regions": {
+          "EU": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:eu-west-1:609812512742:function:80a55286-2a07-4f3a-86f5-6f284305d4d6:Release_0"
+            }
+          },
+          "NA": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-east-1:609812512742:function:80a55286-2a07-4f3a-86f5-6f284305d4d6:Release_0"
+            }
+          },
+          "FE": {
+            "endpoint": {
+              "uri": "arn:aws:lambda:us-west-2:609812512742:function:80a55286-2a07-4f3a-86f5-6f284305d4d6:Release_0"
+            }
+          }
+        }
+      }
+    },
+    "manifestVersion": "1.0",
+    "privacyAndCompliance": {
+      "allowsPurchases": false,
+      "locales": {
+        "es-ES": {
+          "privacyPolicyUrl": "https://www.atc.ie/privacy-policy/"
+        },
+        "en-GB": {
+          "privacyPolicyUrl": "https://www.atc.ie/privacy-policy/"
+        }
+      },
+      "containsAds": false,
+      "isExportCompliant": true,
+      "isChildDirected": false,
+      "usesPersonalInfo": false
+    }
+  }
+}

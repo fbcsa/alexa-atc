@@ -1,0 +1,800 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "electrical smart heaters for atc",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "GetRemoteHeaters",
+          "slots": [],
+          "samples": [
+            "Get all of my emitters",
+            "Get me the temperature of all my emitters",
+            "Get me the temperature of all my heaters"
+          ]
+        },
+        {
+          "name": "GetRemoteTemperature",
+          "slots": [
+            {
+              "name": "radiador",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "What is the temperature of emitter {radiador}",
+            "Give me the temperature of emitter {radiador}",
+            "Give me the temperature of heater {radiador}"
+          ]
+        },
+        {
+          "name": "TurnOffHeater",
+          "slots": [
+            {
+              "name": "radiador",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "Turn off heater {radiador}",
+            "Disconnect heater {radiador}",
+            "Turn off emitter {radiador}",
+            "Disconnect emitter {radiador}"
+          ]
+        },
+        {
+          "name": "TurnOnHeater",
+          "slots": [
+            {
+              "name": "radiador",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "Turn on heater {radiador}",
+            "Turn on emitter {radiador}",
+            "Connect emitter {radiador}",
+            "Connect heater {radiador}"
+          ]
+        },
+        {
+          "name": "ChangeHeaterMode",
+          "slots": [
+            {
+              "name": "radiador",
+              "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "modo",
+              "type": "modos"
+            }
+          ],
+          "samples": [
+            "Change mode for emitter {radiador}",
+            "Change the mode for emitter {radiador}",
+            "Change the mode of emitter {radiador}",
+            "Change emitter {radiador} mode"
+          ]
+        },
+        {
+          "name": "ChangeHeaterTemperature",
+          "slots": [
+            {
+              "name": "radiador",
+              "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "temperature",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{temperature}"
+              ]
+            }
+          ],
+          "samples": [
+            "set temperature for emitter {radiador}",
+            "set temperature of emitter {radiador}"
+          ]
+        },
+        {
+          "name": "TurnOnInstalation",
+          "slots": [
+            {
+              "name": "instalacion",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "Turn on installation {instalacion}",
+            "Connect installation {instalacion}"
+          ]
+        },
+        {
+          "name": "TurnOffZone",
+          "slots": [
+            {
+              "name": "zone",
+              "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{instalation}"
+              ]
+            }
+          ],
+          "samples": [
+            "Disconnect zone {zone}",
+            "Turn off zone {zone}"
+          ]
+        },
+        {
+          "name": "TurnOnZone",
+          "slots": [
+            {
+              "name": "zone",
+              "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery",
+              "samples": [
+                "{instalation}"
+              ]
+            }
+          ],
+          "samples": [
+            "Turn on zone {zone}",
+            "Connect zone {zone}"
+          ]
+        },
+        {
+          "name": "changeInstalationMode",
+          "slots": [
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "modo",
+              "type": "modos",
+              "samples": [
+                "{modo}"
+              ]
+            }
+          ],
+          "samples": [
+            "Change mode for installation {instalation}",
+            "Change the mode for installation {instalation}",
+            "Change installation {instalation} mode"
+          ]
+        },
+        {
+          "name": "ChangeInstalationTemperature",
+          "slots": [
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "temperature",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{temperature}"
+              ]
+            }
+          ],
+          "samples": [
+            "set the temperature for installation {instalation}",
+            "set the temperature of installation {instalation}",
+            "set temperature for installation {instalation}",
+            "set temperature of installation {instalation}"
+          ]
+        },
+        {
+          "name": "changeZoneMode",
+          "slots": [
+            {
+              "name": "zone",
+              "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "modo",
+              "type": "modos"
+            },
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "change mode for zone {zone}",
+            "change the mode for zone {zone}",
+            "change zone {zone} mode"
+          ]
+        },
+        {
+          "name": "ChangeZoneTemperature",
+          "slots": [
+            {
+              "name": "zone",
+              "type": "AMAZON.SearchQuery"
+            },
+            {
+              "name": "temperature",
+              "type": "AMAZON.NUMBER",
+              "samples": [
+                "{temperature}"
+              ]
+            },
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "set the temperature of zone {zone}",
+            "set the temperature for zone {zone}",
+            "set temperature for zone {zone}",
+            "set temperature of zone {zone}"
+          ]
+        },
+        {
+          "name": "TurnOffInstalation",
+          "slots": [
+            {
+              "name": "instalacion",
+              "type": "AMAZON.SearchQuery"
+            }
+          ],
+          "samples": [
+            "Disconnect installation {instalacion}",
+            "Turn off installation {instalacion}"
+          ]
+        },
+        {
+          "name": "HelpWithCommand",
+          "slots": [
+            {
+              "name": "command",
+              "type": "comandos",
+              "samples": [
+                "{command}"
+              ]
+            }
+          ],
+          "samples": [
+            "Help me with commands",
+            "Help me with command {command}",
+            "Help with command {command}",
+            "How do I use the command {command}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "id": "P",
+              "name": {
+                "value": "PROGRAM"
+              }
+            },
+            {
+              "id": "A",
+              "name": {
+                "value": "ANTIFROST"
+              }
+            },
+            {
+              "id": "E",
+              "name": {
+                "value": "ECO"
+              }
+            },
+            {
+              "id": "C",
+              "name": {
+                "value": "COMFORT"
+              }
+            }
+          ],
+          "name": "modos"
+        },
+        {
+          "values": [
+            {
+              "id": "la",
+              "name": {
+                "value": "List all my emitters"
+              }
+            },
+            {
+              "id": "gt",
+              "name": {
+                "value": "Get temperature"
+              }
+            },
+            {
+              "id": "et",
+              "name": {
+                "value": "Establish temperature",
+                "synonyms": [
+                  "Set temperature"
+                ]
+              }
+            },
+            {
+              "id": "em",
+              "name": {
+                "value": "Establish mode",
+                "synonyms": [
+                  "Set mode"
+                ]
+              }
+            },
+            {
+              "id": "tof",
+              "name": {
+                "value": "Turn off",
+                "synonyms": [
+                  "Disconnect"
+                ]
+              }
+            },
+            {
+              "id": "ton",
+              "name": {
+                "value": "Turn on",
+                "synonyms": [
+                  "Connect"
+                ]
+              }
+            }
+          ],
+          "name": "comandos"
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "ChangeHeaterMode",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "radiador",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "modo",
+              "type": "modos",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.505288330297.1365635211900"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ChangeHeaterTemperature",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "radiador",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "temperature",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.792074671604.837864803676"
+              },
+              "validations": [
+                {
+                  "type": "isLessThanOrEqualTo",
+                  "prompt": "Slot.Validation.792074671604.837864803676.115558983315",
+                  "value": "30"
+                },
+                {
+                  "type": "isGreaterThanOrEqualTo",
+                  "prompt": "Slot.Validation.792074671604.837864803676.1087311498068",
+                  "value": "12"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "TurnOnZone",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "zone",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.872853740148.1196969333826"
+              }
+            }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+        },
+        {
+          "name": "changeInstalationMode",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "modo",
+              "type": "modos",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.441862817052.763213363923"
+              }
+            }
+          ]
+        },
+        {
+          "name": "ChangeInstalationTemperature",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "temperature",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1384446344575.1611882471474"
+              },
+              "validations": [
+                {
+                  "type": "isLessThanOrEqualTo",
+                  "prompt": "Slot.Validation.1384446344575.1611882471474.1344567943327",
+                  "value": "30"
+                },
+                {
+                  "type": "isGreaterThanOrEqualTo",
+                  "prompt": "Slot.Validation.1384446344575.1611882471474.1635031194662",
+                  "value": "12"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "changeZoneMode",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "zone",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "modo",
+              "type": "modos",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1022917569872.1427539074520"
+              }
+            },
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1022917569872.309362770340"
+              }
+            }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+        },
+        {
+          "name": "ChangeZoneTemperature",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "zone",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "temperature",
+              "type": "AMAZON.NUMBER",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1514593821214.164438522685"
+              },
+              "validations": [
+                {
+                  "type": "isLessThanOrEqualTo",
+                  "prompt": "Slot.Validation.1514593821214.164438522685.731062190509",
+                  "value": "30"
+                },
+                {
+                  "type": "isGreaterThanOrEqualTo",
+                  "prompt": "Slot.Validation.1514593821214.164438522685.240994828985",
+                  "value": "12"
+                }
+              ]
+            },
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1514593821214.991257662043"
+              }
+            }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+        },
+        {
+          "name": "TurnOffZone",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "zone",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": false,
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "instalation",
+              "type": "AMAZON.SearchQuery",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.40315420106.1595891210539"
+              }
+            }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+        },
+        {
+          "name": "HelpWithCommand",
+          "confirmationRequired": false,
+          "prompts": {},
+          "slots": [
+            {
+              "name": "command",
+              "type": "comandos",
+              "elicitationRequired": true,
+              "confirmationRequired": false,
+              "prompts": {
+                "elicitation": "Elicit.Slot.1026396294544.896899698513"
+              }
+            }
+          ],
+          "delegationStrategy": "SKILL_RESPONSE"
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Elicit.Slot.505288330297.1365635211900",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The following modes are available. Program, antifrost, eco and comfort. What mode do you want?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.792074671604.837864803676",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Select a temperature between twelve and thirty"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.792074671604.837864803676.115558983315",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Temperature must be between twelve and thirty"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.792074671604.837864803676.1087311498068",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Temperature must be between twelve and thirty"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.872853740148.1196969333826",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Of which installation?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.441862817052.763213363923",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The following modes are available. Program, antifrost, eco and comfort. What mode do you want?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1384446344575.1611882471474",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Select a temperature between twelve and thirty"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1384446344575.1611882471474.1344567943327",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Temperature must be between twelve and thirty"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1384446344575.1611882471474.1635031194662",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Temperature must be between twelve and thirty"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1022917569872.1427539074520",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "The following modes are available. Program, antifrost, eco and comfort. What mode do you want?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1022917569872.309362770340",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Of which installation?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1514593821214.164438522685",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Select a temperature between twelve and thirty"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1514593821214.164438522685.731062190509",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Select a temperature between twelve and thirty"
+          }
+        ]
+      },
+      {
+        "id": "Slot.Validation.1514593821214.164438522685.240994828985",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Select a temperature between twelve and thirty"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1514593821214.991257662043",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Of which installation?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.40315420106.1595891210539",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Of which installation?"
+          }
+        ]
+      },
+      {
+        "id": "Elicit.Slot.1026396294544.896899698513",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "what command?"
+          }
+        ]
+      }
+    ]
+  },
+  "version": "57"
+}
