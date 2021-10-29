@@ -91,6 +91,9 @@
             }
           ],
           "samples": [
+            "Cambia el modo para el emisor {radiador}",
+            "Cambiar el modo para el emisor {radiador}",
+            "Cambiar el modo del emisor {radiador}",
             "Cambia el modo del emisor {radiador}"
           ]
         },
@@ -797,5 +800,5 @@
       }
     ]
   },
-  "version": "22"
+  "version": "23"
 }
